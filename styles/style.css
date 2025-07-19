@@ -1,0 +1,144 @@
+:root {
+  --dark-green: #15813F;
+  --white: #FFFFFF;
+  --gray-green: #8AA29E;
+  --black: #000000;
+  --aqua: #00FFFB;
+
+  --font-primary: 'Open Sans', sans-serif;
+  --font-accent: 'Atma', cursive;
+  --font-serif: 'Noto Serif', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--white);
+  color: var(--black);
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-green);
+  padding: 1rem 2rem;
+  color: var(--white);
+  font-family: var(--font-accent);
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+/* New NAV Styles */
+nav {
+  position: relative;
+}
+
+.hamburger {
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none; /* Show only on mobile */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* Responsive Mobile Dropdown */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: var(--dark-green);
+    width: 200px;
+    padding: 1rem;
+    border-radius: 0 0 0 8px;
+    z-index: 10;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.hero-image {
+  background-color: var(--aqua);
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--black);
+  font-size: 2rem;
+  font-family: var(--font-serif);
+}
+
+.profile-recent {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.profile-pic, .recent-projects {
+  flex: 1;
+  background-color: var(--gray-green);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.description {
+  padding: 2rem;
+  background-color: var(--aqua);
+  font-family: var(--font-serif);
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  background-color: var(--gray-green);
+  padding: 1rem;
+  border-radius: 8px;
+  width: 30%;
+  min-width: 200px;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+main {
+  padding: 10px;
+}
